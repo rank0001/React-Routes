@@ -67,6 +67,7 @@ const RenderPostComment = () => {
 		<div className={classes.root}>
 			<LinearProgress />
 			<LinearProgress color="secondary" />
+			<Typography align="center" variant ="h4" >It is either taking time to load data or you have put wrong url information</Typography>
 		</div>
 	) : (
 		<Card className={classes.root}>
