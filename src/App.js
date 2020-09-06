@@ -16,9 +16,11 @@ function App() {
 		overrides: { MuiAppBar: { colorPrimary: { backgroundColor: "#3e2723" } } },
 	});
 	return (
+		<Router>
+
 		<ThemeProvider theme={theme}>
 			<Paper style={{ height: "auto", minHeight: "100vh" }}>
-				<Router>
+				
 					<div className="App">
 						<Navbar />
 						<ContextProvider>
@@ -40,9 +42,10 @@ function App() {
 							</Switch>
 						</ContextProvider>
 					</div>
-				</Router>
+			
 			</Paper>
 		</ThemeProvider>
+		</Router>
 	);
 }
 
