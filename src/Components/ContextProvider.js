@@ -6,7 +6,6 @@ const ContextProvider = (props) => {
 	const findPost = (id) => {
 		return posts.find((post) => post.id == id);
 	};
-
 	return (
 		<PostsContext.Provider value={{ posts, findPost }}>
 			{props.children}

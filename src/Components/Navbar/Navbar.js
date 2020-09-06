@@ -3,13 +3,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import { Tabs, Tab } from "@material-ui/core";
-import Home from "../Home/Home";
-import Posts from "../Post/Posts";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	linkStyle: {
 		textDecoration: "none",
-		color: theme.palette.common.white,
+		color: "white",
 	},
 }));
 
@@ -90,15 +85,13 @@ export default function Navbar() {
 						Material-UI
 					</Typography>
 
-					<Tabs>
-						<Link className={classes.linkStyle} to="/">
-							<Tab label="Home" />
-						</Link>
+					<Link className={classes.linkStyle} to="/">
+						<Typography style={{ margin: "5px" }}>Home</Typography>
+					</Link>
 
-						<Link className={classes.linkStyle} to="/posts">
-							<Tab label="Posts" />
-						</Link>
-					</Tabs>
+					<Link className={classes.linkStyle} to="/posts">
+						<Typography style={{ margin: "5px" }}>Posts</Typography>
+					</Link>
 				</Toolbar>
 			</AppBar>
 		</div>

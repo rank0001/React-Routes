@@ -25,7 +25,7 @@ const Home = () => {
 				color="primary"
 				align="center"
 				className={classes.typoStyle}
-                style={{ minHeight: "20vh" }}
+				style={{ minHeight: "20vh" }}
 			>
 				Welcome to the social media app
 			</Typography>
