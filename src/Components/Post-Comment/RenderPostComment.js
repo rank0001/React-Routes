@@ -51,6 +51,7 @@ const RenderPostComment = () => {
 	const classes = useStyles();
 	const { findPost } = useContext(PostsContext);
 	let { id } = useParams();
+	console.log(typeof id);
 	const [comments, setComment] = useState([]);
 	const [expanded, setExpanded] = React.useState(false);
 
@@ -66,8 +67,7 @@ const RenderPostComment = () => {
 	return post === undefined || comments.length === 0 ? (
 		<div className={classes.root}>
 			<LinearProgress />
-			<LinearProgress color="secondary" />
-			<Typography align="center" variant ="h4" >It is either taking time to load data or you have put wrong url information</Typography>
+			<LinearProgress color="secondary"/>
 		</div>
 	) : (
 		<Card className={classes.root}>

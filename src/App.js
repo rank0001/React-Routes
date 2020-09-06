@@ -17,10 +17,8 @@ function App() {
 	});
 	return (
 		<Router>
-
-		<ThemeProvider theme={theme}>
-			<Paper style={{ height: "auto", minHeight: "100vh" }}>
-				
+			<ThemeProvider theme={theme}>
+				<Paper style={{ height: "auto", minHeight: "100vh" }}>
 					<div className="App">
 						<Navbar />
 						<ContextProvider>
@@ -32,7 +30,7 @@ function App() {
 								<Route exact path="/posts">
 									<Posts />
 								</Route>
-								<Route path="/posts/:id">
+								<Route exact path="/posts/:id([1-9]|[1-9][0-9]|100)">
 									<RenderPostComment />
 								</Route>
 
@@ -42,9 +40,8 @@ function App() {
 							</Switch>
 						</ContextProvider>
 					</div>
-			
-			</Paper>
-		</ThemeProvider>
+				</Paper>
+			</ThemeProvider>
 		</Router>
 	);
 }
