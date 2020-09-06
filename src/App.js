@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RenderPostComment from "./Components/Post-Comment/RenderPostComment";
 import { ThemeProvider, createMuiTheme, Paper } from "@material-ui/core";
 import Home from "./Components/Home/Home";
+import NoRoute from "./Components/NoRoute/NoRoute";
 
 function App() {
 	const theme = createMuiTheme({
@@ -17,7 +18,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Paper style={{ height: "100vh" }}>
+			<Paper style={{ height: 'auto',minHeight:'100vh' }}>
 				<Router>
 					<div className="App">
 						<Navbar />
@@ -33,6 +34,10 @@ function App() {
 								<Route path="/posts/:id">
 									<RenderPostComment />
 								</Route>
+
+								<Route path="*">
+								<NoRoute/>
+							</Route>
 							</Switch>
 						</ContextProvider>
 					</div>

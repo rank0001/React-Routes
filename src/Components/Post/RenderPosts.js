@@ -10,7 +10,8 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    border:"2px solid red"    
+    
+    margin:'20px'    
   },
   bullet: {
     display: 'inline-block',
@@ -25,8 +26,10 @@ const useStyles = makeStyles({
   },
   h3:{
     color:"brown"
+  },
+  linkStyle:{
+    textDecoration:'none'
   }
- 
 });
 
 export default function RenderPosts(props) { 
@@ -35,11 +38,11 @@ export default function RenderPosts(props) {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    
-    <Card className={classes.root} >
-      <Grid container alignItems="center"
+    <Grid container alignItems="center"
     justify="center">
-    <Grid item lg={6} >
+    <Grid item lg={6} > 
+    <Card className={classes.root} >
+       
       <CardContent >
         <Typography className={classes.title} color="textSecondary" gutterBottom >
           <h3><span className={classes.h3}>Title : </span>{title}</h3>
@@ -47,18 +50,20 @@ export default function RenderPosts(props) {
         
         <Typography variant="body2" component="p">
         <h3><span className={classes.h3}>Body: </span>
-        {body}</h3>
-          
+        {body}</h3>  
         </Typography>
       </CardContent>
       <CardActions>
-      <RouterLink to={`/posts/${id}`}>
-      <Button size="large" variant="contained" color="secondary">Learn More</Button>
+      <RouterLink to={`/posts/${id}`} className={classes.linkStyle}>
+      <Button size="large" variant="contained" color="secondary">Click to See More</Button>
       </RouterLink>    
       </CardActions>
-      </Grid>
-    </Grid>
+   
     </Card>
+
+    </Grid>
+    </Grid>
+   
    
   );
 }
