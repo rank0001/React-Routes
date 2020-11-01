@@ -45,19 +45,15 @@ export default function RenderPosts(props) {
 							className={classes.title}
 							color="textSecondary"
 							gutterBottom
-              variant="body1"
+							variant="body1"
 						>
-							
-								<span className={classes.h3}>Title : </span>
-								{title}
-							
+							<span className={classes.h3}>Title : </span>
+							{title}
 						</Typography>
 
 						<Typography variant="body2" component="p">
-							
-								<span className={classes.h3}>Body: </span>
-								{body}
-							
+							<span className={classes.h3}>Body: </span>
+							{body}
 						</Typography>
 					</CardContent>
 					<CardActions>

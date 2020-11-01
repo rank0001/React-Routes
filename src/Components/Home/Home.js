@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, Button, Grid, Typography } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
+
 import Image from "../../background.jpg";
 
 const useStyles = makeStyles({
